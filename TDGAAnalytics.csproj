@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{79CE73AC-C789-43FB-88EA-A511E24CE81F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>TDGAAnalytics</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="TalkingDataGAWP\command\StringFast.cs" />
+    <Compile Include="TalkingDataGAWP\controllers\iDeviceInterface.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\BlockType.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\CompressionMode.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\CopyEncoder.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\Crc32Helper.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\DeflateInput.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\DeflaterManaged.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\DeflateStream.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\DeflateStreamAsyncResult.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\FastEncoder.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\FastEncoderStatics.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\FastEncoderWindow.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\FileFormats.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\GZipDecoder.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\GZipStream.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\GZipUtils.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\HuffmanTree.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\IDeflater.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\Inflater.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\InflaterState.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\InputBuffer.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\InvalidDataException.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\Match.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\MatchState.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\OutputBuffer.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\OutputWindow.cs" />
+    <Compile Include="TalkingDataGAWP\Third\Gzip\SR.cs" />
+    <Compile Include="TalkingDataGAWP\Third\SaveTool.cs" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Compile Include="Global.cs" />
+    <Compile Include="ABCDStruct.cs" />
+    <Compile Include="MD5Core.cs" />
+    <Compile Include="TalkingDataGAWP\TalkingDataGA.cs" />
+    <Compile Include="TalkingDataGAWP\TDGAAccount.cs" />
+    <Compile Include="TalkingDataGAWP\TDGAItem.cs" />
+    <Compile Include="TalkingDataGAWP\TDGAMission.cs" />
+    <Compile Include="TalkingDataGAWP\TDGAVirtualCurrency.cs" />
+    <Compile Include="TalkingDataGAWP\Entity\EventBase.cs" />
+    <Compile Include="TalkingDataGAWP\Entity\EventCharge.cs" />
+    <Compile Include="TalkingDataGAWP\Entity\EventCustomEvent.cs" />
+    <Compile Include="TalkingDataGAWP\Entity\EventInit.cs" />
+    <Compile Include="TalkingDataGAWP\Entity\EventLevelUp.cs" />
+    <Compile Include="TalkingDataGAWP\Entity\EventLogin.cs" />
+    <Compile Include="TalkingDataGAWP\Entity\EventLogout.cs" />
+    <Compile Include="TalkingDataGAWP\Entity\EventMission.cs" />
+    <Compile Include="TalkingDataGAWP\Entity\EventPurchase.cs" />
+    <Compile Include="TalkingDataGAWP\Entity\EventReward.cs" />
+    <Compile Include="TalkingDataGAWP\Entity\EventUpdateAccount.cs" />
+    <Compile Include="TalkingDataGAWP\Entity\EventUse.cs" />
+    <Compile Include="TalkingDataGAWP\Entity\MyJsonDic.cs" />
+    <Compile Include="TalkingDataGAWP\Entity\VOAppProfile.cs" />
+    <Compile Include="TalkingDataGAWP\Entity\VODeviceProfile.cs" />
+    <Compile Include="TalkingDataGAWP\controllers\DeviceProfileController.cs" />
+    <Compile Include="TalkingDataGAWP\controllers\TDGAEventListManager.cs" />
+    <Compile Include="TalkingDataGAWP\controllers\TDGAHttpManager.cs" />
+    <Compile Include="TalkingDataGAWP\controllers\TDGAPreference.cs" />
+    <Compile Include="TalkingDataGAWP\controllers\TDGASessionController.cs" />
+    <Compile Include="TalkingDataGAWP\controllers\TDMissionManager.cs" />
+    <Compile Include="TalkingDataGAWP\command\AppProfileUtil.cs" />
+    <Compile Include="TalkingDataGAWP\command\AsyncPostUtils.cs" />
+    <Compile Include="TalkingDataGAWP\command\Constants.cs" />
+    <Compile Include="TalkingDataGAWP\command\Crc32.cs" />
+    <Compile Include="TalkingDataGAWP\command\DateTimeUtils.cs" />
+    <Compile Include="TalkingDataGAWP\command\Debugger.cs" />
+    <Compile Include="TalkingDataGAWP\command\JsonUtil.cs" />
+    <Compile Include="TalkingDataGAWP\command\PersistedSettingUtils.cs" />
+    <Compile Include="TalkingDataGAWP\command\SerializationUtil.cs" />
+    <Compile Include="TalkingDataGAWP\command\SDKTYPE.cs" />
+    <Compile Include="TalkingDataGAWP\command\TDConfiguration.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
