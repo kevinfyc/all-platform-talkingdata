@@ -1,0 +1,8 @@
+# all-platform-talkingdata
+C#做的支持全平台的talkingdata
+
+windows平台可选择后台的android
+
+需要重载TalkingDataGAWP.controllers.iDeviceInterface 用来指定APPProperty AppVersion DeviceID Location 和DeviceModel
+
+其他使用方式和原生TalkingData一样
